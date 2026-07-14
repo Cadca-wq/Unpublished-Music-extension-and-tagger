@@ -16,13 +16,13 @@ def kenshi_stripper(file_path, remove_str):
     suffix = file_path.suffix
     cleaned_stem =(
         stem
-        .replace(remove_str,"")
-        .replace(f"{remove_str} ","")
-        .replace(f"_{remove_str}","")
         .replace(f"_{remove_str}_","_")
-        .replace(f" {remove_str} ","")
-        .replace(f" {remove_str}","")
         .replace(f"_{remove_str}","")
+        .replace(f"_{remove_str}","")
+        .replace(f" {remove_str} ","")
+        .replace(f"{remove_str} ","")
+        .replace(f" {remove_str}","")
+        .replace(remove_str,"")
         .strip()
     )
     cleaned_name = f"{cleaned_stem}{suffix}"
