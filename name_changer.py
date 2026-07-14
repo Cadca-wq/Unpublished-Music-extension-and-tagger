@@ -26,11 +26,11 @@ def kenshi_stripper(file_path, remove_str):
         .strip()
     )
     cleaned_name = f"{cleaned_stem}{suffix}"
-    
-    if cleaned_name != original_name:
+
+    if cleaned_name != file_path.name:
         new_file_path = file_path.with_name(cleaned_name)
         file_path.rename(new_file_path)
-        print(f"Renamed: {original_name} to {cleaned_name}")
+        print(f"Renamed: {file_path.name} to {cleaned_name}")
 
 def list_all_the_dir(directory):
     ls = [x for x in directory.iterdir()]
